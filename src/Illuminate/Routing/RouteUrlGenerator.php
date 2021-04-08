@@ -131,7 +131,7 @@ class RouteUrlGenerator
     protected function formatDomain($route, &$parameters)
     {
         return $this->addPortToDomain(
-            $this->getRouteScheme($route).$route->getDomain()
+            $this->getRouteScheme($route).$route->getDomain().$this->request->getBaseUrl()
         );
     }
 
